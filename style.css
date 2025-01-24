@@ -100,7 +100,6 @@ h3 {
     width: 100%;
 }
 #s2dgs {
-    /* margin: 50px 0 0 0; */
     margin-top:50px;
     width: 100%;
 }
@@ -111,16 +110,10 @@ h3 {
     padding: 10px 40px 0 40px;
 }
 /* 外枠 */
-#product-flex {
-    margin-top: 40px;
-    display: flex;
-}
-/* 教材（6章）には下記のように記載されていたが
-　　product-leftとproduct-rightを横並びにならなかった */
-/* #product .product-flex{
+#product .product-flex{
     margin: 40px 0 0 0;
     display: flex;
-} */
+}
 /* 左のカラム */
 #product-left {
     width: 50%;
@@ -214,7 +207,7 @@ h3 {
     font-size: 24px;
 }
 .culture-description {
-    margin: 0;  
+    margin: 0;
 }
 /* ビジョン */
 #vision {
@@ -239,7 +232,6 @@ h3 {
     z-index: 30;
 }
 .vision-box > div {
-    /* position: relative; */
     position: absolute;
     top: 0;
     left: 0;
@@ -283,7 +275,7 @@ h3 {
     border-top-style: solid;
 }
 .cell {
-    padding: 3px;
+    padding: 30px;
     border-bottom-color: #ececec;
     border-bottom-width:  1px;
     border-bottom-style: solid;
@@ -312,13 +304,14 @@ h3 {
 }
 .contact-heading {
     width: 240px;
+    align-self: center;
 }
 .contact-label {
     font-weight: bold;
 }
 .contact-span {
     color: #ce2222;
-    margin: 20px;
+    margin: 0 0 0 20px;
     font-weight: bold;
 }
 .contact-textbox {
@@ -338,7 +331,7 @@ h3 {
     border-right: 0;
     border-bottom-width: 1px;
     border-bottom-color: #707070;
-    border-style: solid;
+    /* border-style: solid; */
     background-color: #fafafa;
     width: 400px;
     height: 200px;
@@ -385,7 +378,7 @@ footer {
     text-align: left;
 }
 #sns-footer a {
-    margin: 30px;
+    margin: 0 30px 0 0; 
 }
 #copyright {
     color:#ffffff;
@@ -438,14 +431,18 @@ footer {
     padding: 20px;
     display: flex;
 }
-#mission-five-goals.five-goals-image{
+#mission-five-goals .five-goals-image{
     width: 30%;
     padding: 20px;
 }
-#mission-five-goals.five-goals-image img{
+#mission-five-goals .five-goals-image img{
     width: 100%;
 }
-#mission-five-goals.five-goals-read > div {
+#mission-five-goals .five-goals-read {
+    width: 70%;
+    padding: 20px;
+}
+#mission-five-goals .five-goals-read > div {
     margin-bottom: 40px;
 }
 .fivegoals-image-right{
@@ -560,9 +557,8 @@ footer {
 /* スマートフォン用スタイル */
 /* ---------------------- */
 /* 画面幅が767px以下のとき */
-@media screen and (max-width: 768px) {
-    /* スマートフォン用のスタイルを指定する */
-    /* PC用ナビゲーション非表示 */
+ /* スマートフォン用のスタイルを指定する */
+    @media screen and (max-width: 767px) {
     #nav-pc {
       display: none;
     }
@@ -679,16 +675,10 @@ footer {
         padding: 10px 20px 0 20px;
     }
     /* 外枠 */
-    #product-flex {
+    #product .product-flex {
         flex-direction: column;
         margin-top: 0;
     }
-    /* 教材（15章）には下記のように記載されていたが
-　　product-leftとproduct-rightを横並びにならなかった */
-    /* #product .product-flex {
-        flex-direction: column;
-        margin-top: 0;
-    } */
      /* 見出し、説明文 */
     #product-left,
     #product-right {
@@ -696,7 +686,7 @@ footer {
         margin: 0;
     }
     #product-left > div,
-    #product-right > div{
+    #product-right > div {
         height: auto;
         margin: 0;
     }
@@ -722,8 +712,8 @@ footer {
         font-size: 16px;
     }
     .culture-table {
-        margin: 0;
-        padding: 20px;
+        margin-right: 0;
+        padding-right: 20px;
         order: 2;
     }
     .culture-img {
@@ -731,7 +721,7 @@ footer {
         order: 1;
     }
     .culture-img2 {
-        margin: 0;
+        margin-top: 0;
     }
     .culture-num {
         padding: 0;
@@ -850,7 +840,7 @@ footer {
         margin: 0;
     }
     .mission-h2::after {
-        content:none
+        content: none;
     }
     #mission-s2dgs > img {
         width: 100%;
@@ -907,7 +897,7 @@ footer {
     /* セクション */
   .product-section {
     flex-direction: column;
-  } 
+  }
   .product-section .product-section-img {
     width: 100%;
   }
